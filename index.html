@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my COMP1720 sketch</title>
+
+	<!-- this is the main p5 library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+	<!-- this is the p5 sound library -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.js"></script> -->
+
+	<!-- if you have errors with the above sound library, try uncommenting this one instead -->
+	<!-- NOTE: do NOT uncomment both -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js"></script> -->
+
+	<!--
+		 Note: if you have no access to the internet, the cdnjs.cloudflare.com links
+		 above (and therefore your sketch) won't work.
+
+		 If you want to be able to work offline, you will need to download the p5
+		 libraries (e.g. from https://p5js.org/download/ and place them in a `lib`
+		 folder in this project. Then, you can remove the <script> tags above and replace
+		 them with the (currently commented-out) ones below:
+
+		 <script src="lib/p5/p5.js"></script>
+		 <script src="lib/p5/addons/p5.sound.js"></script>
+		 -->
+
+
+	<!-- here's where we include the actual sketch file -->
+	<script src="sketch.js"></script>
+	<!-- external libraries -->
+
+	<!-- CSS styling for "back to gallery" button, remove scrollbars -->
+	<link rel="stylesheet" type="text/css" href="assets/index.css">
+  </head>
+
+  <body>
+    <div class="guicontainer">
+	  <nav><a href="https://cs.anu.edu.au/courses/comp1720/showcase/2020/" style="text-decoration: none;">back to gallery</a></nav>
+	    <div class="subui">
+		  <div class="button tool" id="play" >⏵</div>
+		  <div class="button tool" id="clear-board">↻</div>
+		  <div class="button tool" id="help">?</div>
+		  <div>
+			<a id="penA" class="tool" style="color: #DC1414;">⏺</a>
+			<a id="penT" class="tool" style="color: #FFFF00;">⏺</a>
+			<a id="penC" class="tool" style="color: #90EE90;">⏺</a>
+			<a id="penG" class="tool" style="color: #00BFFF;">⏺</a>
+		  </div>
+		  <div>
+			<a id="rand" class="tool">⛆</a>
+			<a id="drop" class="tool">☄</a>
+		  </div>
+		  <div>
+			  <a id="grid" class="tool">⌗</a>
+			  <a id="simp" class="tool">◑</a>
+			  <a id="life" class="tool selected">🧬</a>
+		  </div>
+		  <div class="button"><span id="mass" class="dencity">3</span></div>
+		  <div class="button">🗲: <span id="speednum">XX</span> <input type="range" min="0" max="12" value="6" class="slider" id="speedRange"></div>
+		  <div class="button">🔍: <span id="sizenum">XX</span> <input type="range" min="2" max="40" value="10" class="slider" id="sizeRange"></div>
+		</div>
+	  </div>
+	  <img class="help" id="img" src="assets/help.png" alt="">
+	  <a class="help file" id="helpfile" href="/assets/help.txt" target="_blank">🕮</a>
+  </body>
+
+  <script src="gui.js"></script>
+</html>
